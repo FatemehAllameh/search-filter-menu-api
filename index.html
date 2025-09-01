@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Menu</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./assets/fontawesome/css/all-fonts.min.css" />
-</head>
-<body>
-    
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="header-title">Filter and search Menu from API</h1>
+      <input
+        type="text"
+        class="search-bar"
+        autocomplete="off"
+        placeholder="Search by name"
+      />
+      <!-- BUTTONS -->
+       <div class="buttons">
+        <button type="button" class="button">All</button>
+        <button type="button" class="button">Breakfast</button>
+        <button type="button" class="button">Lunch</button>
+        <button type="button" class="button">Dinner</button>
+       </div>
+    </header>
+    <!-- MAIN -->
+     <div class="menu">
+        <div class="menu-item">
+            <img src="./assets/chocoBerry.jpg" class="item-img" alt="">
+            <h3 class="item-name">item name</h3>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/chocoBerry.jpg" class="item-img" alt="">
+            <h3 class="item-name">item name</h3>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/chocoBerry.jpg" class="item-img" alt="">
+            <h3 class="item-name">item name</h3>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/chocoBerry.jpg" class="item-img" alt="">
+            <h3 class="item-name">item name</h3>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/chocoBerry.jpg" class="item-img" alt="">
+            <h3 class="item-name">item name</h3>
+        </div>
+     </div>
+     <!-- FOOTER -->
+      <footer class="footer">
+        <p class="footer-text">Made with 💗 by <a href="https://github.com/FatemehAllameh">Fatemeh Allameh</a></p>
+      </footer>
 
     <!-- SCIPRTS -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
