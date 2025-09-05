@@ -92,6 +92,20 @@ input {
   box-shadow: -2px -2px 5px #212121, 2px 2px 5px #141414;
 }
 
+.loading {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+}
+
+.err-text {
+   text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+  color: red;
+  display: none;
+}
+
 .menu {
     display: flex;
     align-items: center;
