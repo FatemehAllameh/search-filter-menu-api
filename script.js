@@ -3,6 +3,7 @@ const menuList = document.querySelector(".menu");
 const loading = document.querySelector(".loading");
 const errorText = document.querySelector(".err-text");
 const searchBar = document.querySelector(".search-bar");
+const buttons = document.querySelector(".buttons");
 
 let menuItems = null;
 
@@ -14,6 +15,20 @@ const getItems = async () => {
     );
     const data = await response.data;
     menuItems = data.meals;
+    // GET ALL CATEGORIES TO CREATE BUTTON BY ITS NAME
+    const categories = menuItems.reduce(
+      (acc, item) => {
+        if (!acc.includes(item.strCategory)) {
+          acc.push(item.strCategory);
+        }
+        return acc;
+      },
+      ["All"]
+    );
+
+    // CREATE BUTTON FOR EACH CATEGORY
+    createCategoryButtons(categories);
+
     // HIDE LOADING TEXT
     loading.style.display = "none";
     displayMenuItems(menuItems);
@@ -59,6 +74,15 @@ function searchItems() {
   }
   displayMenuItems(filterNams);
 }
+
+const createCategoryButtons = (categories) => {
+  categories.map((category) => {
+    const button = `
+        <button type="button" class="button">${category}</button>
+    `;
+    buttons.innerHTML += button;
+  });
+};
 
 // GET MENU ITEMS FROM API WHEN PAGE LOADS
 getItems();
