@@ -3,6 +3,9 @@
 A simple web application to search and filter food menu items.  
 Built with HTML, CSS, and JavaScript (Axios for fetching API data).
 
+You can try the project online **[here](https://search-filter-menu-api.vercel.app/)**
+
+
 ---
 
 ## 🚀 Features
@@ -30,6 +33,9 @@ Follow these steps to run the project locally:
 
 2. Open the project  
    Navigate to the extracted folder and open the index.html file in your browser.
+
+Or, you can try the project online [here](https://search-filter-menu-api.vercel.app/)
+
 
 Made with :heartpulse: by [Fatemeh Allameh](https://github.com/FatemehAllameh)
 
