@@ -75,13 +75,36 @@ function searchItems() {
   displayMenuItems(filterNams);
 }
 
+// CREATE CATEGORY BUTTONS DYNAMICALLY
+
 const createCategoryButtons = (categories) => {
   categories.map((category) => {
     const button = `
-        <button type="button" class="button">${category}</button>
+        <button
+        type="button"
+        data-category="${category}"
+        onclick="filtersDataByCategory(this)"
+        class="button">${category}
+        </button>
     `;
+    // ADD BUTTON TO THE BUTTONS CONTAINER
     buttons.innerHTML += button;
   });
+};
+
+// FUNCTION TO FILTER ITEMS BY ITS CATEGORY
+const filtersDataByCategory = (btn) => {
+  searchBar.value = "";
+  const buttonCategory = btn.dataset.category;
+  // SHOW ALL ITEMS WHEN ALL BUTTON IS CLICKED
+  if (buttonCategory === "All") {
+    displayMenuItems(menuItems);
+  } else {
+    const matchedItems = menuItems.filter((item) => {
+      return item.strCategory.toLowerCase() === buttonCategory.toLowerCase();
+    });
+    displayMenuItems(matchedItems);
+  }
 };
 
 // GET MENU ITEMS FROM API WHEN PAGE LOADS
